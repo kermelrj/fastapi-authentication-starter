@@ -1,0 +1,10 @@
+Install pyenv on windows
+    Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+Install version of python
+    pyenv install 3.12.10
+Install pyenv virtualenv
+    Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win-venv/main/bin/install-pyenv-win-venv.ps1" -OutFile "$HOME\install-pyenv-win-venv.ps1"; &"$HOME\install-pyenv-win-venv.ps1"
+Create virtual environment
+    pyenv-win-venv install 3.12.10 fastapi-auth-starter
+Activate virtual environment
+    pyenv-win-venv activate fastapi-auth-starter
